@@ -1,0 +1,21 @@
+.chatlist-enter {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .2s ease-in;
+}
+.chatlist-enter-active {
+    max-height: 500px;
+    opacity: 1;
+    transition: all .2s ease-in;
+}
+.chatlist-leave {
+    max-height: 500px;
+    opacity: 1;
+}
+.chatlist-leave-active {
+    opacity: 0;
+    max-height: 0;
+    transition: all .3s ease-out;
+    overflow: hidden;
+}

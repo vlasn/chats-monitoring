@@ -1,15 +1,19 @@
 .Activity__wrapper {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     margin: 2px;
     box-sizing: border-box;
     border-radius: 6px;
     border: 3px solid;
     padding: 5px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 .Activity__header-wrapper {
     display: flex;
     height: 100px;
     width: 300px;
+    cursor: pointer;
 }
 .Activity__card-left {
     flex: 1 0 0;
@@ -71,7 +75,5 @@
 
 
 .Activity__chat-list-wrapper {
-    border-top: 3px dashed lightgrey;
-    margin-top: 5px;
-    padding: 5px;
+    box-sizing: border-box;
 }
