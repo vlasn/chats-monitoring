@@ -1,0 +1,77 @@
+.Activity__wrapper {
+    float: left;
+    margin: 2px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 3px solid;
+    padding: 5px;
+}
+.Activity__header-wrapper {
+    display: flex;
+    height: 100px;
+    width: 300px;
+}
+.Activity__card-left {
+    flex: 1 0 0;
+    background-color: #fff6f6;
+    display: block;
+    height: 100%;
+    width: 31%;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    font-size: 2em;
+    color: white;
+}
+.Activity__initials {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.Activity__card-right {
+    flex: 2 0 0;
+    padding: 3px 3px;
+    display: flex;
+}
+.Activity__info {
+    flex: 1 0 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.Activity__info-row {
+
+}
+.Activity__chat-count {
+    position: relative;
+    height: 100%;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+.invisible {
+    border-color: lightgrey;
+}
+.invisible .Activity__card-left {
+    background-color: lightgrey;
+}
+
+.active .Activity__card-left {
+    background-color: #78e088;
+}
+.active {
+    border-color: #78e088;
+}
+.away {
+    border-color: #e0d05b;
+}
+.away .Activity__card-left {
+    background-color: #e0d05b;
+}
+
+
+.Activity__chat-list-wrapper {
+    border-top: 3px dashed lightgrey;
+    margin-top: 5px;
+    padding: 5px;
+}
