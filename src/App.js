@@ -56,19 +56,19 @@ export default App;
 
 let sampleAgents = [
     {
-        name: "Veljo Lasn",
+        name: "Robert Douglas",
         status: "away",
         chats: [
             {
-                name: "Custy 1",
+                name: "Client One",
                 duration: "10:00:00"
             },
             {
-                name: "Custay 2",
+                name: "Helpful Feedback Guy",
                 duration: "05:00:00"
             },
             {
-                name: "Customeur",
+                name: "admin",
                 duration: "10:00:00"
             },
             {
@@ -82,39 +82,39 @@ let sampleAgents = [
         status: "active",
         chats: [
             {
-                name: "Custy 3",
+                name: "ToothbrushesRUs",
                 duration: "10:00:00"
             },
             {
-                name: "Custay 4",
+                name: "Loyal Paying Customer",
                 duration: "05:00:00"
             }
         ]
     },
     {
-        name: "Mario Tasane",
+        name: "Billing Specialist",
         status: "invisible",
         chats: [
             {
-                name: "Customeur 5",
+                name: "Roland V.",
                 duration: "10:00:00"
             }
         ]
     },
     {
-        name: "Veljo Lasn",
+        name: "Marvin Fielder",
         status: "away",
         chats: [
             {
-                name: "Custy 1",
+                name: "Odis Severt",
                 duration: "10:00:00"
             },
             {
-                name: "Custay 2",
+                name: "CoolStuffCo",
                 duration: "05:00:00"
             },
             {
-                name: "Customeur",
+                name: "anonymous",
                 duration: "10:00:00"
             },
             {
@@ -128,21 +128,21 @@ let sampleAgents = [
         status: "active",
         chats: [
             {
-                name: "Custy 3",
+                name: "Tere Maailm",
                 duration: "10:00:00"
             },
             {
-                name: "Custay 4",
+                name: "Valmar",
                 duration: "05:00:00"
             }
         ]
     },
     {
-        name: "Mario Tasane",
+        name: "Charles Pinetree",
         status: "invisible",
         chats: [
             {
-                name: "Customeur 5",
+                name: "Unimaginitive Name",
                 duration: "10:00:00"
             }
         ]
