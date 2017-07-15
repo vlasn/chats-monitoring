@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .Activity__wrapper {
     display: inline-block;
     vertical-align: top;
@@ -54,25 +56,24 @@
     letter-spacing: 2px;
 }
 .invisible {
-    border-color: lightgrey;
-}
-.invisible .Activity__card-left {
-    background-color: lightgrey;
+    border-color: $grey;
+    .Activity__card-left {
+        background-color: $grey;
+    }
 }
 
-.active .Activity__card-left {
-    background-color: #78e088;
-}
 .active {
-    border-color: #78e088;
+    border-color: $green;
+    .Activity__card-left {
+        background-color: $green;
+    }
 }
 .away {
-    border-color: #e0d05b;
+    border-color: $yellow;
+    .Activity__card-left {
+        background-color: $yellow;
+    }
 }
-.away .Activity__card-left {
-    background-color: #e0d05b;
-}
-
 
 .Activity__chat-list-wrapper {
     box-sizing: border-box;

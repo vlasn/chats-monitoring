@@ -1,15 +1,9 @@
+@import "./mixins";
 .App {
     display: flex;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-}
-.App__metrics {
-    flex: 1 0 0;
-    height: 100%;
-    top:0;
-    bottom: 0;
-    background-color: #78e088;
 }
 .App__activity {
     flex: 3 0 0;

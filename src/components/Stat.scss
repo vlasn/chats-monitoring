@@ -1,0 +1,24 @@
+@import "../mixins";
+
+.Stat__wrapper {
+  width: $metricsWidth;
+}
+.Stat {
+  box-sizing: border-box;
+  margin: 10px;
+  background-color: $darkGrey;
+  color: $grey;
+  border-radius: 6px;
+  padding: 4px;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  .Stat__name {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .Stat__number-wrapper {
+    text-align: center;
+    font-size: 3em;
+  }
+}

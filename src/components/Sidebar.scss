@@ -1,0 +1,35 @@
+@import "../mixins.scss";
+.Sidebar {
+  height: 100%;
+  top:0;
+  bottom: 0;
+  background-color: $dark;
+  overflow: hidden;
+  width: 40px;
+  transition: width 0.5s ease;
+  &.open {
+    width: $metricsWidth;
+    .Sidebar__header {
+      transform: rotateZ(0);
+      border-bottom: 1px solid black;
+      padding-left: 40px;
+      &:hover {
+        background-color: $darkGrey;
+      }
+    }
+  }
+  .Sidebar__header {
+
+    transform-origin: 0 100%;
+    transform: rotateZ(90deg);
+    transition: all 0.2s ease;
+
+    width: 100%;
+    display: block;
+    font-size: 1.4em;
+    padding: 6px;
+    color: $grey;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+}

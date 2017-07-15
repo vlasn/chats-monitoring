@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import "./ChatRow.css"
+import "./ChatRow.scss"
 
 export default class ChatRow extends Component {
     constructor(props) {

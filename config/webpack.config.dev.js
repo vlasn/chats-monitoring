@@ -105,6 +105,7 @@ module.exports = {
   module: {
     strictExportPresence: true,
     rules: [
+
       // TODO: Disable require.ensure as it's not a standard language feature.
       // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
       // { parser: { requireEnsure: false } },
@@ -139,6 +140,7 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          /\.scss$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -179,6 +181,11 @@ module.exports = {
       // "style" loader turns CSS into JS modules that inject <style> tags.
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
+      {
+          test: /\.scss$/,
+          //include: paths.appSrc,
+          loaders: ["style-loader","css-loader", "sass-loader"]
+      },
       {
         test: /\.css$/,
         use: [

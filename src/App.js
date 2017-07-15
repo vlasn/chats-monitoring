@@ -1,31 +1,51 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import Activity from "./components/Activity"
+import OptionsRow from "./components/OptionsRow"
+import Sidebar from "./components/Sidebar"
+import Stat from "./components/Stat"
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showDetails: false
+      showDetails: false,
+      sidebarOpen: true
     }
-    this.toggle = this.toggle.bind(this)
+    this.toggleDetails = this.toggleDetails.bind(this)
+    this.toggleSidebar = this.toggleSidebar.bind(this)
+
   }
-  toggle() {
-      this.setState({showDetails: !this.state.showDetails})
+  toggleDetails() {
+      this.setState({
+          ...this.state,
+          showDetails: !this.state.showDetails
+      })
+  }
+  toggleSidebar() {
+      this.setState({
+          ...this.state,
+          sidebarOpen: !this.state.sidebarOpen
+      })
   }
 
   render() {
     return (
       <div className="App">
-        <div className="App__metrics">
-            <div>Chats</div>
-            <li className="App__options-row" onClick={this.toggle}>
-                <div className="App_option-text">tere</div>
-                <div className="App__option-status">{this.state.showDetails ? "ON" : "OFF"}</div>
-            </li>
-        </div>
+          <Sidebar toggle={this.toggleSidebar} open={this.state.sidebarOpen}>
+              <Stat name="Total chats" number={totalChatCount(sampleAgents)}/>
+              <Stat name="Chats per agent" number={totalChatsPerAgent(sampleAgents)}/>
+              <Stat name="Chat trolls" number={5}/>
+              <Stat name="Puppies" number={3}/>
+              <Stat name="Chat trolls fed to puppies" number={14}/>
+
+              <OptionsRow text="Chat details" on={this.state.showDetails} callback={this.toggleDetails}/>
+          </Sidebar>
         <div className="App__activity">
-            {sampleAgents.map(agent => <Activity agent={agent} showDetails={this.state.showDetails}/>)}
+            {sampleAgents.map(agent => <Activity
+                agent={agent}
+                showDetails={this.state.showDetails}
+            />)}
         </div>
       </div>
     );
@@ -129,3 +149,7 @@ let sampleAgents = [
     },
 
 ]
+
+//To be refactored to selectors:
+let totalChatCount = (agents) => agents.reduce((acc,val)=>acc+val.chats.length,0)
+let totalChatsPerAgent = (agents) => Math.round((totalChatCount(agents)/agents.length)*100)/100

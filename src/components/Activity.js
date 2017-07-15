@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import "./Activity.css"
+import "./Activity.scss"
 import ChatRow from "./ChatRow"
 import Transition from "./Transition"
 
